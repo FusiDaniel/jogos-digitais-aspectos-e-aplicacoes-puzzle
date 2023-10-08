@@ -11,6 +11,14 @@ public class ManagePuzzleGame : MonoBehaviour
     public Image localMarcado;
     float lmLargura, lmAltura;
 
+    void falaInicial()
+    {
+        GameObject.Find("totemInicio").GetComponent<tocadorInicio>().playInicio();
+    }
+    void falaPlay()
+    {
+        GameObject.Find("totemPlay").GetComponent<tocadorPlay>().playPlay();
+    }
     void criarLocaisMarcados()
     {
         lmLargura = 100; lmAltura = 100;
@@ -90,6 +98,7 @@ public class ManagePuzzleGame : MonoBehaviour
     {
         criarLocaisMarcados();
         criarPartes();
+        falaInicial();
     }
 
     void Update()
@@ -98,6 +107,7 @@ public class ManagePuzzleGame : MonoBehaviour
         if (timer > 4 && !partesEmbaralhadas)
         {
             embaralhaPartes();
+            falaPlay();
             partesEmbaralhadas = true;
         }
     }
