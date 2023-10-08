@@ -288,17 +288,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\"A long time ago in a galaxy far, far away.\u2026\"\r\n\r\nIt is a period
-    of civil wars in the galaxy. A brave alliance of underground freedom fighters
-    has challenged the tyranny and oppression of the awesome GALACTIC EMPIRE.\r\n\r\nStriking
-    from a fortress hidden among the billion stars of the galaxy, rebel spaceships
-    have won their first victory in a battle with the powerful Imperial Starfleet.
-    The EMPIRE fears that another defeat could bring a thousand more solar systems
-    into the rebellion, and Imperial control over the galaxy would be lost forever.\r\n\r\n\r\nTo
-    crush the rebellion once and for all, the EMPIRE is constructing a sinister new
-    battle station. Powerful enough to destroy an entire planet, its completion spells
-    certain doom for the champions of freedom.\r\n\r\nA new hope is born in the vicinity
-    of a remote Zoo on a more distant blue-sky planet known as Earth..."
+  m_text: "\"A aproximadamente 4 horas, comecei a fazer esta atividade \u2026\"\r\n\r\nForam
+    4 horas interessantes, descobrindo C#, que achei muito mais simples de escrever
+    do que C e C++\r\n\r\nNeste tempo, percebi que a Unity \xE9 uma ferramenta extremamente
+    simples e intuitiva de se mexer, e espero aprender bastante nesta mat\xE9ria.\r\n\r\nPeguei
+    esta mat\xE9ria no reajuste, trocando outra mat\xE9ria que envolvia matem\xE1tica
+    demais, mas como estava em meu \xFAltimo quadrimestre, j\xE1 n\xE3o tinha mais
+    cabe\xE7a para fazer conta hehe.\r\n\r\nEspero conseguir entregar esta atividade
+    a tempo, porque est\xE1 chovendo aqui e estou com medo de cair a energia..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a895688cb8a48649a79381821e28d5c, type: 2}
   m_sharedMaterial: {fileID: 5538540751819095291, guid: 6a895688cb8a48649a79381821e28d5c,
@@ -430,7 +427,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 15, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -400}
+  m_AnchoredPosition: {x: 0, y: -300}
   m_SizeDelta: {x: 800, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &924693092
@@ -443,7 +440,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 40afe412bfadc654abcaa4af9734bc19, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c8fdf111f3435bc4391878bec33e2bd9, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -803,7 +800,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: STAR WARS ZOO
+  m_text: 'PRIMEIRA ATIVIDADE
+
+    JDATA'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 60be274e2b6f4a244a4364ee54aba165, type: 2}
   m_sharedMaterial: {fileID: 654109186774008043, guid: 60be274e2b6f4a244a4364ee54aba165,

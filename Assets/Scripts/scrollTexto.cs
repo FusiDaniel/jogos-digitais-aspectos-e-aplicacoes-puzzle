@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class scrollTexto : MonoBehaviour
 {
-    public float scrollSpeed = 20;
+    public float scrollSpeed = 40;
     void Start()
     {
         
