@@ -34,7 +34,7 @@ public class DragAndDrop : MonoBehaviour
         GameObject img = gameObject;
         string tag = gameObject.tag;
         GameObject lm1 = GameObject.Find("LM" + tag);
-        
+
         float distance = Vector3.Distance(lm1.transform.position, img.transform.position);
         print("Distância" + distance);
         if (distance <= 50)
@@ -43,6 +43,10 @@ public class DragAndDrop : MonoBehaviour
             moveBack();
     }
 
+    public void posicaoInicialPartes()
+    {
+        posicaoOriginal = transform.position;
+    }
     public void Drop()
     {
         checkMatch();
