@@ -10,6 +10,7 @@ public class ManagePuzzleGame : MonoBehaviour
     public Image parte;
     public Image localMarcado;
     float lmLargura, lmAltura;
+    bool win;
 
     void falaInicial()
     {
@@ -19,6 +20,12 @@ public class ManagePuzzleGame : MonoBehaviour
     {
         GameObject.Find("totemPlay").GetComponent<tocadorPlay>().playPlay();
     }
+
+    void efeitoVitoria()
+    {
+        GameObject.Find("totemVitoria").GetComponent<tocadorVitoria>().playVitoria();
+    }
+
     void criarLocaisMarcados()
     {
         lmLargura = 100; lmAltura = 100;
@@ -94,6 +101,28 @@ public class ManagePuzzleGame : MonoBehaviour
             g.GetComponent<DragAndDrop>().posicaoInicialPartes();
         }
     }
+
+    void chenckAndHandleWin()
+    {
+        win = true;
+        for (int i = 0; i < 25; i++)
+        {
+            var g = GameObject.Find("Parte" + (i + 1));
+            var lm = GameObject.Find("LM" + (i + 1));
+            float distance = Vector3.Distance(lm.transform.position, g.transform.position);
+            if (distance > 0)
+            {
+                win = false;
+            }
+        }
+        if (win)
+        {
+            efeitoVitoria();
+            embaralhaPartes();
+        }
+        win = false;
+    }
+
     void Start()
     {
         criarLocaisMarcados();
@@ -110,5 +139,6 @@ public class ManagePuzzleGame : MonoBehaviour
             falaPlay();
             partesEmbaralhadas = true;
         }
+        chenckAndHandleWin();
     }
 }
