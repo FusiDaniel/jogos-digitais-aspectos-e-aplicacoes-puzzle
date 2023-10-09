@@ -759,7 +759,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 497098271}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1390631920}
+        m_TargetAssemblyTypeName: chamaFechamento, Assembly-CSharp
+        m_MethodName: FecharGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &497098271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1077,6 +1089,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1390631918}
   - component: {fileID: 1390631917}
+  - component: {fileID: 1390631920}
+  - component: {fileID: 1390631919}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1111,6 +1125,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1390631919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390631916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3b066dd259aab24ca1d7115fe2bfa6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1390631920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390631916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3d2f41143792254fa224a0d96e29c4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1450558868
 GameObject:
   m_ObjectHideFlags: 0

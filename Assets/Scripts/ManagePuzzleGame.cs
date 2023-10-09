@@ -11,6 +11,9 @@ public class ManagePuzzleGame : MonoBehaviour
     public Image localMarcado;
     float lmLargura, lmAltura;
     bool win;
+    public string TimerTxt = "00:00";
+
+    // [SerializeField] TextMeshProUGUI TimerTxt;
 
     void falaInicial()
     {
@@ -25,6 +28,7 @@ public class ManagePuzzleGame : MonoBehaviour
     {
         GameObject.Find("totemVitoria").GetComponent<tocadorVitoria>().playVitoria();
     }
+
 
     void criarLocaisMarcados()
     {
@@ -64,7 +68,7 @@ public class ManagePuzzleGame : MonoBehaviour
             lm.tag = "" + (i + 1);
             lm.name = "Parte" + (i + 1);
             lm.transform.SetParent(GameObject.Find("Canvas").transform);
-            Sprite[] todasSprites = Resources.LoadAll<Sprite>("leao");
+            Sprite[] todasSprites = Resources.LoadAll<Sprite>("noTime");
             Sprite s1 = todasSprites[i];
             lm.GetComponent<Image>().sprite = s1;
         }
@@ -123,6 +127,7 @@ public class ManagePuzzleGame : MonoBehaviour
         win = false;
     }
 
+
     void Start()
     {
         criarLocaisMarcados();
@@ -133,12 +138,30 @@ public class ManagePuzzleGame : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
+        updateTime(timer);
         if (timer > 4 && !partesEmbaralhadas)
         {
             embaralhaPartes();
             falaPlay();
             partesEmbaralhadas = true;
+            GameObject.Find("timer").GetComponent<timerCountdown>().TimerOn = true;
         }
-        chenckAndHandleWin();
+        if (!win) { chenckAndHandleWin(); }
+        print(TimerTxt);
+        GameObject.Find("TimerTxt").GetComponent<TMPro.TextMeshProUGUI>().text = TimerTxt;
+        // if (GameObject.Find("timer").GetComponent<timerCountdown>().TimeLeft == 0) {
+        //     GameObject.Find("timer").GetComponent<timerCountdown>().setTimeLeft(10.0f);
+        // }
+    }
+
+    void updateTime(float time)
+    {
+        time += 1;
+
+        float minutes = Mathf.FloorToInt(time / 60);
+        float seconds = Mathf.FloorToInt(time % 60);
+
+        TimerTxt = string.Format("{0:00}:{1:00}", minutes, seconds);
+
     }
 }
