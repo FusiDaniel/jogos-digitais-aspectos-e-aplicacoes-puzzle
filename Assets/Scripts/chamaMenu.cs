@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class chamaCreditos : MonoBehaviour
+
+
+public class chamaMenu : MonoBehaviour
 {
-    public void AbreCreditos() {
-        SceneManager.LoadScene("Creditos");
+    public void AbrirMenu() {
+        SceneManager.LoadScene("MenuPrincipal");
     }
 }
