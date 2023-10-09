@@ -144,22 +144,16 @@ public class ManagePuzzleGame : MonoBehaviour
             embaralhaPartes();
             falaPlay();
             partesEmbaralhadas = true;
-            GameObject.Find("timer").GetComponent<timerCountdown>().TimerOn = true;
         }
         if (!win) { chenckAndHandleWin(); }
-        print(TimerTxt);
         GameObject.Find("TimerTxt").GetComponent<TMPro.TextMeshProUGUI>().text = TimerTxt;
-        // if (GameObject.Find("timer").GetComponent<timerCountdown>().TimeLeft == 0) {
-        //     GameObject.Find("timer").GetComponent<timerCountdown>().setTimeLeft(10.0f);
-        // }
     }
 
     void updateTime(float time)
     {
-        time += 1;
-
-        float minutes = Mathf.FloorToInt(time / 60);
-        float seconds = Mathf.FloorToInt(time % 60);
+        if (time < 4) { return; }
+        float minutes = Mathf.FloorToInt((time - 4) / 60);
+        float seconds = Mathf.FloorToInt((time - 4) % 60);
 
         TimerTxt = string.Format("{0:00}:{1:00}", minutes, seconds);
 
